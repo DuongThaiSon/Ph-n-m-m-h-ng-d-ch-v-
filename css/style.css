@@ -14938,6 +14938,7 @@ Card
 ******************/
 .card {
   margin-bottom: 20px;
+  margin-left: 60px;
 }
 
 .card .card-subtitle {
@@ -16319,6 +16320,7 @@ icons path
   right: 0;
   border-top: 1px solid #e9ecef;
   background: #fff;
+  margin-left: 60px;
 }
 
 /*******************
