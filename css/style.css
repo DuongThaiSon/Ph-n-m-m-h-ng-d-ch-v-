@@ -15225,21 +15225,7 @@ Display Classes
 /*******************
 Main sidebar
 ******************/
-.left-sidebar {
-  position: absolute;
-  width: 260px;
-  height: 100%;
-  top: 0px;
-  left: -200px;
-  z-index: 50;
-  padding-top: 0px;
-  background: #fff;
-  -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
-  -webkit-transition: 0.3s ease-in;
-  -o-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-}
+
 
 .left-sidebar .nav-text-box {
   padding: 13px 25px 13px 15px;
@@ -15288,7 +15274,7 @@ sidebar navigation
 }
 
 .sidebar-nav ul li a i {
-  float: right;
+  /* float: right; */
   font-style: normal;
   width: 32px;
   text-align: center;
@@ -15309,7 +15295,7 @@ sidebar navigation
 }
 
 .sidebar-nav ul li ul {
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 15px;
   background: rgba(0, 0, 0, 0.02);
 }
 
@@ -15339,8 +15325,8 @@ sidebar navigation
 }
 
 .sidebar-nav>ul>li>a i {
-  font-size: 16px;
-  margin-top: 3px;
+  font-size: 14px;
+  /* margin-top: 3px; */
   vertical-align: middle;
   color: #a6b7bf;
 }
@@ -16240,8 +16226,7 @@ icons path
 }
 
 .page-titles h4 {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin: 0 0 0 60px;
 }
 
 .page-titles .breadcrumb {
@@ -16494,8 +16479,10 @@ Mini sidebar
 ******************/
 @media (min-width: 769px) {
   .left-sidebar:hover {
-    left: 0px;
+    /* left: 0px; */
+    width: 260px;
   }
+
 
   .navbar-header {
     margin-left: 60px;
@@ -17248,23 +17235,27 @@ File: scss
 .pagination a:hover {
   background-color: #f8f9fa;
 }
+
 .section-heading {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 30px;
-    background-color: #f2f4f5;
-    padding: 10px 25px;
-    border-left: 4px solid #ed3974;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  background-color: #f2f4f5;
+  padding: 10px 25px;
+  border-left: 4px solid #ed3974;
 }
+
 .section-heading h5 {
   margin-bottom: 0;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 1;
 }
+
 .comment_area .single_comment_area {
   margin-bottom: 30px;
 }
+
 .comment_area .comment-content .comment-author {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 70px;
@@ -17274,13 +17265,16 @@ File: scss
   height: 70px;
   border-radius: 50%;
 }
+
 .comment_area .comment-content .comment-author img {
   border-radius: 50%;
   max-width: 100%;
 }
+
 .comment_area .comment-content .comment-meta {
   margin-bottom: 30px;
 }
+
 .comment_area .comment-content .comment-meta .comment-date {
   font-size: 12px;
   color: #777777;
@@ -17288,12 +17282,15 @@ File: scss
   letter-spacing: 2px;
   margin-bottom: 5px;
 }
-.comment-meta h5{
+
+.comment-meta h5 {
   color: #000000;
 }
-ol{
+
+ol {
   list-style: none;
 }
+
 .reply {
   font-size: 13px;
   font-weight: 400;
@@ -17308,16 +17305,20 @@ ol{
   color: #000000;
   transition-duration: 500ms;
 }
+
 .reply:hover {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
   color: black !important;
 }
-.clear{
+
+.clear {
   clear: both;
 }
-.contact-form-area{
+
+.contact-form-area {
   padding: 0 30px 30px 30px;
 }
+
 .mag-btn {
   background-color: #ed3974;
   -webkit-transition-duration: 500ms;
@@ -17336,4 +17337,187 @@ ol{
   font-weight: 500;
   text-transform: capitalize;
   margin-top: 25px;
+}
+
+.left-sidebar {
+  position: fixed;
+  width: 65px;
+  height: 100%;
+  top: 0;
+  /* left: -200px; */
+  z-index: 50;
+  padding-top: 0px;
+  background: #fff;
+  -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+#sidebarnav .arrow {
+  line-height: 23px;
+  position: absolute;
+  right: 28px;
+  -webkit-transition: all .05s ease-in;
+  -o-transition: all .05s ease-in;
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+
+#sidebarnav .arrow i {
+  font-size: 12px;
+}
+
+.sidebar-nav ul li a:not(.collapsed)>.arrow {
+  transform: rotate(90deg);
+}
+
+.icon-holder {
+  display: inline-block;
+  position: relative;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  margin-right: 8px;
+}
+
+.sidebar-link {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 15px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.hide-menu {
+  display: none;
+}
+
+.left-sidebar:hover .sidebar-nav ul li a .hide-menu {
+  display: inline-block;
+}
+
+.left-sidebar:hover #sidebarnav .arrow {
+  opacity: 1;
+}
+
+.left-sidebar:not(:hover) .sub-sidemenu {
+  display: none;
+}
+
+.sub-sidemenu {
+  transition: all .3s ease;
+}
+
+.selected {
+  color: #fff !important;
+}
+
+#login-bg {
+  background: linear-gradient(135deg, #EA5C54 0%, #bb6dec 100%);
+}
+
+.login {
+  background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+  border-top: 2px solid #D8312A;
+  padding: 40px 0;
+  /* height: 40vh; */
+  width: 20vw;
+  margin: 17vh auto;
+}
+
+.login-title {
+  color: #afb1be;
+  height: 60px;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.login-fields input[type='text'],
+.login-fields input[type='password'] {
+  color: #afb1be;
+  width: 100%;
+  background: #32364a;
+  padding: 15px 65px;
+  border-top: 2px solid #393d52;
+  border-bottom: 2px solid #393d52;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  box-shadow: none;
+}
+.login-user_icon{
+  opacity: .5;
+}
+.login-user_icon img {
+  position: absolute;
+  top: 18px;
+  left: 28px;
+}
+
+.login-user,
+.login-password {
+  position: relative;
+}
+
+.login-submit {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-login {
+  border-radius: 50px;
+  background: transparent;
+  /* padding: 10px 50px; */
+  border: 2px solid #DC6180;
+  color: #DC6180;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition-duration: .2s;
+  outline: 0;
+}
+
+.btn-login a{
+  color: #DC6180;
+  padding: 10px 50px;
+  display: block;
+}
+
+.btn-login:hover {
+  background: #DC6180;
+  cursor: pointer;
+  transition-property: background, color;
+  transition-duration: .2s;
+}
+
+.btn-login:hover a{
+  color: white;
+}
+
+.login-signup a:hover{
+  color: #DC6180;
+}
+.login-signup a{
+  color: #afb1be;
+}
+.register-form{
+  display: none;
+}
+.register-form input{
+  color: #afb1be;
+  width: 100%;
+  background: #32364a;
+  padding: 9px 20px;
+  border-top: 2px solid #393d52;
+  border-bottom: 2px solid #393d52;
+  border-right: none;
+  border-left: none;
+  outline: none;
+  box-shadow: none;
+}
+button:focus {
+  outline: 0 !important;
 }

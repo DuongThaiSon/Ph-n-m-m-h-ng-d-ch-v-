@@ -8,28 +8,28 @@ File: js
 // Auto select left navbar
 // ============================================================== 
 $(function () {
-     var url = window.location + "";
-        var path = url.replace(window.location.protocol + "//" + window.location.host + "/", "");
-        var element = $('ul#sidebarnav a').filter(function() {
-            return this.href === url || this.href === path;// || url.href.indexOf(this.href) === 0;
-        });
+    //  var url = window.location + "";
+    //     var path = url.replace(window.location.protocol + "//" + window.location.host + "/", "");
+    //     var element = $('ul#sidebarnav a').filter(function() {
+    //         return this.href === url || this.href === path;// || url.href.indexOf(this.href) === 0;
+    //     });
 
-        element.parentsUntil(".sidebar-nav").each(function (index)
-        {
-            if($(this).is("li") && $(this).children("a").length !== 0)
-            {
-                $(this).parent("ul#sidebarnav").length === 0
-                    ? $(this).addClass("active")
-                    : $(this).addClass("selected");
-            }
-            else if(!$(this).is("ul") && $(this).children("a").length === 0)
-            {
-                $(this).addClass("selected");
-            }
-            else if($(this).is("ul")){
-                $(this).show();
-            }
-        });
+    //     element.parentsUntil(".sidebar-nav").each(function (index)
+    //     {
+    //         if($(this).is("li") && $(this).children("a").length !== 0)
+    //         {
+    //             $(this).parent("ul#sidebarnav").length === 0
+    //                 ? $(this).addClass("active")
+    //                 : $(this).addClass("selected");
+    //         }
+    //         else if(!$(this).is("ul") && $(this).children("a").length === 0)
+    //         {
+    //             $(this).addClass("selected");
+    //         }
+    //         else if($(this).is("ul")){
+    //             $(this).show();
+    //         }
+    //     });
 
     element.addClass("active"); 
     $('#sidebarnav a').on('click', function (e) {
