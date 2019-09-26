@@ -17537,3 +17537,9 @@ input[name="username"]:-webkit-autofill,input[name="username"]:-webkit-autofill:
   background: none;
   color: #000;
 }
+.clear{
+  clear: both;
+}
+.add-content{
+  margin-top: 30px;
+}
