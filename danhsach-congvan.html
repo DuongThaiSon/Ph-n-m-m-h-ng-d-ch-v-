@@ -102,7 +102,7 @@
         <div class="scroll-sidebar">
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
-                    <li>
+                    <li class="selected">
                         <a class="waves-effect waves-dark sidebar-link" href="index.html" aria-expanded="false">
                             <span class="icon-holder">
                                 <i class="fas fa-home"></i>
@@ -110,7 +110,7 @@
                             <span class="hide-menu">Trang chủ</span>
                         </a>
                     </li>
-                    <li class="nav-item selected">
+                    <li class="nav-item">
                         <a class="waves-effect waves-dark sidebar-link collapsed" href="#submenu-1"
                             data-toggle="collapse" data-target="#submenu-1" aria-expanded="false">
                             <span class="icon-holder">
@@ -124,10 +124,10 @@
                         <div class="collapse sub-sidemenu" id="submenu-1" aria-expanded="false">
                             <ul class="flex-column nav">
                                 <li class="nav-item">
-                                    <a href="add-cv.html" class="sidebar-link">Tạo văn bản đến</a>
+                                    <a href="them-congvan.html" class="sidebar-link">Tạo văn bản đến</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="list-received.html" class="sidebar-link selected">Danh sách văn bản đến</a>
+                                    <a href="danhsach-congvan.html" class="sidebar-link">Danh sách văn bản đến</a>
                                 </li>
                             </ul>
                         </div>
@@ -146,10 +146,10 @@
                         <div class="collapse sub-sidemenu" id="submenu-2" aria-expanded="false">
                             <ul class="flex-column nav">
                                 <li class="nav-item">
-                                    <a href="add-cv.html" class="sidebar-link">Tạo văn bản đi</a>
+                                    <a href="them-congvan.html" class="sidebar-link">Tạo văn bản đi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Danh sách văn bản đi</a>
+                                    <a href="danhsach-congvan.html" class="sidebar-link">Danh sách văn bản đi</a>
                                 </li>
                             </ul>
                         </div>
@@ -168,13 +168,13 @@
                         <div class="collapse sub-sidemenu" id="submenu-6" aria-expanded="false">
                             <ul class="flex-column nav">
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Tạo văn bản nội bộ</a>
+                                    <a href="them-congvan.html" class="sidebar-link">Tạo văn bản nội bộ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Danh sách văn bản nội bộ</a>
+                                    <a href="danhsach-congvan.html" class="sidebar-link">Danh sách văn bản nội bộ</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Phòng ban</a>
+                                    <a href="phongban.html" class="sidebar-link">Phòng ban</a>
                                 </li>
                             </ul>
                         </div>
@@ -193,10 +193,10 @@
                         <div class="collapse sub-sidemenu" id="submenu-4" aria-expanded="false">
                             <ul class="flex-column nav">
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Danh sách chưa phê duyệt</a>
+                                    <a href="danhsach-pheduyet.html" class="sidebar-link">Danh sách chưa phê duyệt</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Danh sách đã phê duyệt</a>
+                                    <a href="danhsach-pheduyet.html" class="sidebar-link">Danh sách đã phê duyệt</a>
                                 </li>
                             </ul>
                         </div>
@@ -215,15 +215,15 @@
                         <div class="collapse sub-sidemenu" id="submenu-3" aria-expanded="false">
                             <ul class="flex-column nav">
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Loại văn bản</a>
+                                    <a href="loai-vanban.html" class="sidebar-link">Loại văn bản</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="sidebar-link">Nơi ban hành</a>
+                                    <a href="noi-banhanh.html" class="sidebar-link">Nơi ban hành</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none">
                         <a class="waves-effect waves-dark sidebar-link collapsed" href="#submenu-5"
                             data-toggle="collapse" data-target="#submenu-5" aria-expanded="false">
                             <span class="icon-holder">
@@ -248,6 +248,7 @@
                             </ul>
                         </div>
                     </li>
+
                 </ul>
             </nav>
         </div>
@@ -255,14 +256,17 @@
 
     <div class="page-wrapper">
         <div class="container-fluid">
-            <div class="row">
-                <div class="text-left">
-                    <a href="" class="btn btn-info">
+            <div class="row pl-5">
+                <div class="text-left pl-4 pt-5">
+                    <a href="them-congvan.html" class="btn btn-info btn-list-add">
                         <i class="fas fa-folder-plus"></i>
+                    </a>
+                    <a href="" class="btn btn-danger btn-list-add">
+                        <i class="far fa-trash-alt"></i>
                     </a>
                 </div>
             </div>
-            <div class="row pt-5">
+            <div class="row pt-2">
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
@@ -273,7 +277,7 @@
                                 <thead>
                                     <tr>
                                         <th class="text-center">
-                                            <input type="checkbox" name="" id=""/>
+                                            <input type="checkbox" name="" id="" />
                                         </th>
                                         <th>Mã</th>
                                         <th>Tên văn bản</th>
@@ -288,7 +292,82 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="text-center"> <input type="checkbox" name="" id=""/></td>
+                                        <td class="text-center"> <input type="checkbox" name="" id="" /></td>
+                                        <td class="txt-oflo">123456</td>
+                                        <td class="txt-oflo">Elite admin</td>
+                                        <td class="txt-oflo">Thông báo</td>
+                                        <td class="txt-oflo">26/1/2019</td>
+                                        <td class="txt-oflo">Tất cả khoa</td>
+                                        <td class="txt-oflo">Chờ duyệt</td>
+                                        <td class="txt-oflo">Hiệu trưởng</td>
+                                        <td class="txt-oflo">
+                                            <a href="test.docx" download class="file-format">
+                                                <i class="fas fa-file-word"></i>
+                                            </a>
+                                        </td>
+                                        <td class="txt-oflo">
+                                            <div class="btn-group">
+                                                <button href="" class="btn btn-info" data-toggle="modal"
+                                                    data-target="#myModal" title="Chi tiết">
+                                                    <i class="fas fa-info-circle"></i>
+                                                </button>
+                                                <div class="modal fade" id="myModal">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Thông báo</h4>
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="modal">&times;</button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <label for="">Mã văn bản: </label>
+                                                                    <span> 123456</span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Tên văn bản: </label>
+                                                                    <span> Thông báo nghỉ lễ 2/9</span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Loại văn bản: </label>
+                                                                    <span> 20/1/2019</span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Ngày gửi: </label>
+                                                                    <span> 20/1/2019</span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Nơi nhận: </label>
+                                                                    <span> Khoa CNTT</span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Người nhận: </label>
+                                                                    <span> Trưởng khoa</span>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="">Nội dung: </label>
+                                                                    <span> Học sinh được nghỉ phép từ ngày 2/9 đến hết
+                                                                        ngày 3/9</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-danger"
+                                                                    data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <a href="add-cv.html" class="btn btn-success" title="Sửa">
+                                                    <i class="far fa-edit"></i>
+                                                </a>
+                                                <a href="" class="btn btn-danger" title="Xóa">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                         <td class="txt-oflo">123456</td>
                                         <td class="txt-oflo">Elite admin</td>
                                         <td class="txt-oflo">Thông báo</td>
@@ -316,35 +395,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center"> <input type="checkbox" name="" id=""/></td>
-                                        <td class="txt-oflo">123456</td>
-                                        <td class="txt-oflo">Elite admin</td>
-                                        <td class="txt-oflo">Thông báo</td>
-                                        <td class="txt-oflo">26/1/2019</td>
-                                        <td class="txt-oflo">Tất cả khoa</td>
-                                        <td class="txt-oflo">Chờ duyệt</td>
-                                        <td class="txt-oflo">Hiệu trưởng</td>
-                                        <td class="txt-oflo">
-                                            <a href="test.docx" download class="file-format">
-                                                <i class="fas fa-file-word"></i>
-                                            </a>
-                                        </td>
-                                        <td class="txt-oflo">
-                                            <div class="btn-group">
-                                                <a href="" class="btn btn-info" title="Chi tiết">
-                                                    <i class="fas fa-info-circle"></i>
-                                                </a>
-                                                <a href="" class="btn btn-success" title="Sửa">
-                                                    <i class="far fa-edit"></i>
-                                                </a>
-                                                <a href="" class="btn btn-danger" title="Xóa">
-                                                    <i class="far fa-trash-alt"></i>
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center"> <input type="checkbox" name="" id=""/></td>
+                                        <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                         <td class="txt-oflo">123456</td>
                                         <td class="txt-oflo">Elite admin</td>
                                         <td class="txt-oflo">Thông báo</td>
@@ -372,7 +423,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td class="text-center"> <input type="checkbox" name="" id=""/></td>
+                                        <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                         <td class="txt-oflo">123456</td>
                                         <td class="txt-oflo">Elite admin</td>
                                         <td class="txt-oflo">Thông báo</td>

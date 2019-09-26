@@ -16,6 +16,20 @@
     <link href="icons/themify-icons/themify-icons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/dashboard1.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="js/waves.js"></script>
+    <script src="js/sidebarmenu.js"></script>
+    <script src="js/custom.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/c3.min.js"></script>
+    <script src="js/dashboard1.js"></script>
+    <script src="js/script.js"></script>
 </head>
 
 <body class="skin-default-dark fixed-layout">
@@ -24,7 +38,7 @@
             <div class="loader__figure"></div>
         </div>
     </div>
-    <div id="main-wrapper">
+    <div class="main-wrapper">
         <header class="topbar">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header">
@@ -80,11 +94,7 @@
 
         <aside class="left-sidebar">
             <div class="d-flex no-block nav-text-box align-items-center">
-                <span>
-                    <a href="index.html">
-                        <img src="images/logo-icon.png" alt="elegant admin template" class="logo">
-                    </a>
-                </span>
+                <span><img src="images/logo-icon.png" alt="elegant admin template" class="logo"></span>
                 <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i
                         class="ti-menu"></i></a>
                 <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i
@@ -247,197 +257,200 @@
             </div>
         </aside>
 
-        <!-- <div class="page-wrapper">
+        <div class="page-wrapper">
             <div class="container-fluid">
-                <div class="row page-titles">
-                    <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Trang chủ</h4>
+                <div class="row pl-5">
+                    <div class="text-left pl-4 pt-5">
+                        <a href="add-cv.html" class="btn btn-info btn-list-add" title="Duyệt tất cả">
+                            <i class="fas fa-check"></i>
+                        </a>
+                        <a href="" class="btn btn-danger btn-list-add" title="Hủy tất cả">
+                            <i class="fas fa-times"></i>
+                        </a>
                     </div>
-                    <div class="col-md-7 align-self-center text-right">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active"><a href="">Home</a></li>
-                            </ol>
-                        </div>
-                    </div>
-                </div> 
-                <div class="row pt-5">
+                </div>
+                <div class="row pt-2">
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex">
-                                    <div>
-                                        <h5 class="card-title">Danh sách công văn</h5>
-                                    </div>
-                                    <div class="ml-auto d-none">
-                                        <select class="custom-select b-0">
-                                            <option>January</option>
-                                            <option value="1">February</option>
-                                            <option value="2" selected="">March</option>
-                                            <option value="3">April</option>
-                                        </select>
-                                    </div>
-                                </div>
+                                <h5>Danh sách công văn chưa được duyệt</h5>
                             </div>
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">#</th>
-                                            <th>Tên công văn</th>
-                                            <th>Mã công văn</th>
-                                            <th>Loại công văn</th>
-                                            <th>Trạng thái</th>
-                                            <th>Người gửi</th>
-                                            <th>Thời gian gửi</th>
-                                            <th>Bộ phận nhận</th>
-                                            <th>Bộ phận đã xử lí</th>
-                                            <th>Bộ phận chưa xử lí</th>
-                                            <th>Số người đọc</th>
+                                            <th class="text-center">
+                                                <input type="checkbox" name="" id="" />
+                                            </th>
+                                            <th>Mã</th>
+                                            <th>Tên văn bản</th>
+                                            <th>Loại văn bản</th>
+                                            <th>Ngày gửi</th>
+                                            <th>Nơi nhận</th>
+                                            <th>Trạng thái duyệt</th>
+                                            <th>Người duyệt</th>
                                             <th>File đính kèm</th>
-                                            <th>Định dạng file</th>
-                                            <th>Chi tiết</th>
+                                            <th>Thao tác</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                             <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
-                                            <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
+                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="txt-oflo">Thông báo</td>
+                                            <td class="txt-oflo">26/1/2019</td>
                                             <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
+                                            <td class="txt-oflo">Chờ duyệt</td>
+                                            <td class="txt-oflo">Hiệu trưởng</td>
                                             <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
+                                                <a href="test.docx" download class="file-format">
+                                                    <i class="fas fa-file-word"></i>
+                                                </a>
                                             </td>
-                                            <td class="txt-oflo">.doc</td>
                                             <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
+                                                <div class="btn-group">
+                                                    <button href="" class="btn btn-info" data-toggle="modal"
+                                                        data-target="#myModal" title="Chi tiết">
+                                                        <i class="fas fa-info-circle"></i>
+                                                    </button>
+                                                    <div class="modal fade" id="myModal">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h4 class="modal-title">Thông báo</h4>
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal">&times;</button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="form-group">
+                                                                        <label for="">Mã văn bản: </label>
+                                                                        <span> 123456</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Tên văn bản: </label>
+                                                                        <span> Thông báo nghỉ lễ 2/9</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Loại văn bản: </label>
+                                                                        <span> 20/1/2019</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Ngày gửi: </label>
+                                                                        <span> 20/1/2019</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Nơi nhận: </label>
+                                                                        <span> Khoa CNTT</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Người nhận: </label>
+                                                                        <span> Trưởng khoa</span>
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="">Nội dung: </label>
+                                                                        <span> Học sinh được nghỉ phép từ ngày 2/9 đến
+                                                                            hết ngày 3/9</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                        data-dismiss="modal">Close</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="add-cv.html" class="btn btn-success" title="Phê duyệt">
+                                                        <i class="fas fa-check"></i>
+                                                    </a>
+                                                    <a href="" class="btn btn-danger" title="Không phê duyệt">
+                                                        <i class="fas fa-times"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                             <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
-                                            <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
+                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="txt-oflo">Thông báo</td>
+                                            <td class="txt-oflo">26/1/2019</td>
                                             <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
+                                            <td class="txt-oflo">Chờ duyệt</td>
+                                            <td class="txt-oflo">Hiệu trưởng</td>
                                             <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
+                                                <a href="test.docx" download class="file-format">
+                                                    <i class="fas fa-file-word"></i>
+                                                </a>
                                             </td>
-                                            <td class="txt-oflo">.doc</td>
                                             <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
+                                                <div class="btn-group">
+                                                    <a href="" class="btn btn-info" title="Chi tiết">
+                                                        <i class="fas fa-info-circle"></i>
+                                                    </a>
+                                                    <a href="add-cv.html" class="btn btn-success" title="Phê duyệt">
+                                                        <i class="fas fa-check"></i>
+                                                    </a>
+                                                    <a href="" class="btn btn-danger" title="Không phê duyệt">
+                                                        <i class="fas fa-times"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                             <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
-                                            <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
+                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="txt-oflo">Thông báo</td>
+                                            <td class="txt-oflo">26/1/2019</td>
                                             <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
+                                            <td class="txt-oflo">Chờ duyệt</td>
+                                            <td class="txt-oflo">Hiệu trưởng</td>
                                             <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
+                                                <a href="test.docx" download class="file-format file-format-pdf">
+                                                    <i class="fas fa-file-pdf"></i>
+                                                </a>
                                             </td>
-                                            <td class="txt-oflo">.doc</td>
                                             <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
+                                                <div class="btn-group">
+                                                    <a href="" class="btn btn-info" title="Chi tiết">
+                                                        <i class="fas fa-info-circle"></i>
+                                                    </a>
+                                                    <a href="add-cv.html" class="btn btn-success" title="Phê duyệt">
+                                                        <i class="fas fa-check"></i>
+                                                    </a>
+                                                    <a href="" class="btn btn-danger" title="Không phê duyệt">
+                                                        <i class="fas fa-times"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
+                                            <td class="text-center"> <input type="checkbox" name="" id="" /></td>
                                             <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
-                                            <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
-                                            <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
-                                            <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
-                                            </td>
-                                            <td class="txt-oflo">.doc</td>
-                                            <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">1</td>
                                             <td class="txt-oflo">Elite admin</td>
-                                            <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
-                                            <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
+                                            <td class="txt-oflo">Thông báo</td>
+                                            <td class="txt-oflo">26/1/2019</td>
                                             <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
-                                            <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
-                                            </td>
-                                            <td class="txt-oflo">.doc</td>
-                                            <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
-                                            <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
+                                            <td class="txt-oflo">Chờ duyệt</td>
                                             <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
-                                            <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
                                             <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
+                                                <a href="test.docx" download class="file-format file-format-excel">
+                                                    <i class="fas fa-file-excel"></i>
+                                                </a>
                                             </td>
-                                            <td class="txt-oflo">.doc</td>
                                             <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">1</td>
-                                            <td class="txt-oflo">Elite admin</td>
-                                            <td class="txt-oflo">123456</td>
-                                            <td class="txt-oflo">Công văn đến</td>
-                                            <td class="txt-oflo">Đang tiến hành</td>
-                                            <td class="txt-oflo">Hiệu trưởng</td>
-                                            <td class="txt-oflo">21:00 - 26/1/2019</td>
-                                            <td class="txt-oflo">Tất cả khoa</td>
-                                            <td class="txt-oflo">Khoa CNTT</td>
-                                            <td class="txt-oflo">Khoa Kinh Tế</td>
-                                            <td class="txt-oflo">30</td>
-                                            <td class="txt-oflo">
-                                                <a href="test.docx" download>Download</a>
-                                            </td>
-                                            <td class="txt-oflo">.doc</td>
-                                            <td class="txt-oflo">
-                                                <a href="Bao-cao-tong-ket-de-tai-nckh-phan-tich-quy-trinh.htm">Xem</a>
+                                                <div class="btn-group">
+                                                    <a href="" class="btn btn-info" title="Chi tiết">
+                                                        <i class="fas fa-info-circle"></i>
+                                                    </a>
+                                                    <a href="add-cv.html" class="btn btn-success" title="Phê duyệt">
+                                                        <i class="fas fa-check"></i>
+                                                    </a>
+                                                    <a href="" class="btn btn-danger" title="Không phê duyệt">
+                                                        <i class="fas fa-times"></i>
+                                                    </a>
+                                                </div>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -446,46 +459,9 @@
                         </div>
                     </div>
                 </div>
-                <ul class="pagination justify-content-end">
-                    <li><a href="">Previous</a></li>
-                    <li><a href="">1</a></li>
-                    <li><a href="">2</a></li>
-                    <li><a href="">3</a></li>
-                    <li><a href="">Next</a></li>
-                </ul>
-                <div style="clear:both"></div>
             </div>
-        </div> -->
-        <footer class="footer">
-            © 2019 Quản lý công văn by Sơn, Tuấn, Dũng
-        </footer>
+        </div>
     </div>
-
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Bootstrap popper Core JavaScript -->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="js/perfect-scrollbar.jquery.min.js"></script>
-    <!--Wave Effects -->
-    <script src="js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!--morris JavaScript -->
-    <script src="js/raphael-min.js"></script>
-    <script src="js/morris.min.js"></script>
-    <script src="js/jquery.sparkline.min.js"></script>
-    <!--c3 JavaScript -->
-    <script src="js/d3.min.js"></script>
-    <script src="js/c3.min.js"></script>
-    <!-- Chart JS -->
-    <script src="js/dashboard1.js"></script>
-    <script src="js/script.js"></script>
 </body>
 
 </html>
