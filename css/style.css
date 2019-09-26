@@ -17543,3 +17543,12 @@ input[name="username"]:-webkit-autofill,input[name="username"]:-webkit-autofill:
 .add-content{
   margin-top: 30px;
 }
+.file-format i{
+  font-size: 30px;
+}
+.file-format-excel{
+  color: green;
+}
+.file-format-pdf{
+  color: chocolate;
+}
